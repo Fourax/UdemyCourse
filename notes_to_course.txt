@@ -1,0 +1,7 @@
+Links:
+coding standards :https://isocpp.org/wiki/faq/coding-standards
+
+
+
+Notes to links:
+Podstawowe wytyczne do c++ :http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
