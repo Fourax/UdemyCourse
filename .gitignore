@@ -31,6 +31,10 @@
     [Rr]elease*/
     Ankh.NoLoad
     
+    # Ignore files with extension `.class` & `.exe`
+    *.class
+    *.exe
+
     #Tooling
     _ReSharper*/
     *.resharper
