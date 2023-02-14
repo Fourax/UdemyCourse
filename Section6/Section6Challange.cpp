@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    
     cout << "Welcome back im My Cleaning Service"<<endl;
 
     int smallRoom;
@@ -28,6 +29,7 @@ int main()
     cout<<"=========================================================="<<endl;
     cout <<"Toal estimate: $"<<((pricePerSmallRoom*smallRoom)+(pricePerLargeRoom*largeRooms))+(((pricePerSmallRoom*smallRoom)+(pricePerLargeRoom*largeRooms))*salesTax)<<endl;
     cout<<"This estimate is valid for "<<estimateExpiry<<" day"<<endl;
+    
     return 0;
 
 }

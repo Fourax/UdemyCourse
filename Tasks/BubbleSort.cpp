@@ -1,34 +1,49 @@
-#include <iostream>
 #include <cstdlib>
-#include <fstream>
+#include <iostream>
+#include <iostream>
+#include<fstream>
+#include<string>
+#include <vector>
 using namespace std;
- 
-void bubbleSort(int tab[], int n)
+
+int main()
 {
-   {
-        for (int j=n-1; j>=1; j--)
+   string array[10]; 
+    short loop=0; 
+    string line; 
+    ifstream myfile ("numbers.txt"); 
+    if (myfile.is_open()) 
+    {
+        while (! myfile.eof() ) 
         {
-            if (tab[j]<tab[j-1])
+            getline (myfile,line); 
+            array[loop] = line;
+            cout << array[loop] << endl; 
+            loop++;
+        }
+        myfile.close(); 
+    }
+    else cout << "can't open the file"; 
+    
+   
+
+    for (int i=0; i<9; i++)
+    {
+        for (int j=0; j<9; j++)
+        {
+            if (array[j]>array[j+1])
             {
-                int bufor;
-                bufor= tab[j-1];
-                tab[j-1]=tab[j];
-                tab[j]=bufor;
+                swap(array[j], array[j+1]);
             }
         }
     }
-}
-    int main()
-{
-    ifstream file("numbers.txt");    
 
-    while (!file.eof())
+    for (int i = 0; i<10; i++)
     {
-        int numbers;
-        file >> numbers;
-        bubbleSort(numbers);
-        cerr << numbers << endl;
+        cout << array[i] << " ";
     }
 
+    system("PAUSE >nul");
     return 0;
+    
 }

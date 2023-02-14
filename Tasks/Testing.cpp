@@ -28,20 +28,21 @@ int main()
                 }
                 else
                 {
-                    out << c1  <<c2<<endl;
+                    out << c1  <<c2;
                 }
             }
             else 
             {
-                out <<c1<<endl;
+                out <<c1;
             }
         }
         else
         {
-            out << c1 <<endl;
+            out << c1 ;
         }
        
     }
+
 
     in.close();
     out.close();
@@ -51,62 +52,7 @@ int main()
 
 
    
-    /* int count {0};
-    int sum {0};
-    int num;*/
    
-
-   /* ifstream filein("numbers.txt");
-
-
-if (!filein) {
-        std::cerr << "Could not open the file - '"<< std::endl;
-        return -1;
-    }
-
-    
-    int N;
-    filein >> N;
-    std::cout << "reading " << N << " integers: " << std::endl;
-
-    int* data = new int[N];
-    for(int i = 0; i < N; i++){
-        filein >> data[i];
-        std::cout << data[i] << std::endl;
-    }
-    delete[] data;
-
-
-
-   // if(filein.is_open())
-   // {
-   //     filein.ignore(";",' ');
-
-        
-        
-        
-        /*
-         do
-        {
-         X filein >> num;
-            if(!filein.fail())
-            {
-                count ++;
-                sum += num;
-            }
-        }while(filein.fail());
-        filein.close();
-
-        cout << "Count " << count << endl;
-        cout << "Sum "<< sum << endl;
-        cout << "Num "<<num<<endl;
-        
-    }
-    else
-    {
-        cout << "Could not open file!"<<endl;
-    }
-*/
 
     return 0;
 }
