@@ -1,49 +1,26 @@
-#include <cstdlib>
-#include <iostream>
-#include <iostream>
-#include<fstream>
-#include<string>
-#include <vector>
+#include<iostream>
 using namespace std;
-
-int main()
+int main ()
 {
-   string array[10]; 
-    short loop=0; 
-    string line; 
-    ifstream myfile ("numbers.txt"); 
-    if (myfile.is_open()) 
-    {
-        while (! myfile.eof() ) 
-        {
-            getline (myfile,line); 
-            array[loop] = line;
-            cout << array[loop] << endl; 
-            loop++;
-        }
-        myfile.close(); 
-    }
-    else cout << "can't open the file"; 
-    
-   
-
-    for (int i=0; i<9; i++)
-    {
-        for (int j=0; j<9; j++)
-        {
-            if (array[j]>array[j+1])
-            {
-                swap(array[j], array[j+1]);
-            }
-        }
-    }
-
-    for (int i = 0; i<10; i++)
-    {
-        cout << array[i] << " ";
-    }
-
-    system("PAUSE >nul");
-    return 0;
-    
+   int i, j,temp,pass=0;
+   int a[10] {3,6,7,4,5,9,10,1,8,2};
+   for(i = 0; i<10; i++) {
+      cout <<a[i]<< "\t";
+   }
+cout<<endl;
+for(i = 0; i<10; i++) {
+   for(j = i+1; j<10; j++)
+   {
+      if(a[j] < a[i]) {
+         temp = a[i];
+         a[i] = a[j];
+         a[j] = temp;
+      }
+   }
+pass++;
+}
+for(i = 0; i<10; i++) {
+   cout <<a[i] << "\t";
+}
+return 0;
 }
