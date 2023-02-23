@@ -2,8 +2,8 @@
 using namespace std;
 int main ()
 {
-   int i, j,temp,pass=0;
-   int a[10] {3,6,7,4,5,9,10,1,8,2};
+   int i, j,temp,pass=0,k;
+   int a[10] {3,6,7,4,5,9,10,2,8,1};
    for(i = 0; i<10; i++) {
       cout <<a[i]<< "\t";
    }
@@ -17,10 +17,14 @@ for(i = 0; i<10; i++) {
          a[j] = temp;
       }
    }
+
+for(k = 0; k<10; k++) 
+{
+   cout <<a[k] << "\t";
+}
+cout<<endl;
 pass++;
 }
-for(i = 0; i<10; i++) {
-   cout <<a[i] << "\t";
-}
+
 return 0;
 }

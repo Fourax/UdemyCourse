@@ -7,7 +7,7 @@ int main ()
 {
     vector <int> vector1;
     vector <int> vector2;
-
+ cout <<vector1.size();
     vector1.push_back(10);
     vector1.push_back(20);
 

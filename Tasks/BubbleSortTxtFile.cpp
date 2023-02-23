@@ -20,16 +20,18 @@ int main () {
       myFile >> index >> semicolon ;
       myArray[i] = index;
     }
-   for(index = 0; index<10; index++) {
-   for(index2 = index+1; index2<10; index2++)
+   for(index = 0; index<10; index++) 
    {
-      if(myArray[index2] < myArray[index]) {
-         temp = myArray[index];
-         myArray[index] = myArray[index2];
-         myArray[index2] = temp;
-      }
-   }
-pass++;
+        for(index2 = index+1; index2<10; index2++)
+            {
+                if(myArray[index2] < myArray[index]) 
+                {
+                temp = myArray[index];
+                myArray[index] = myArray[index2];
+                myArray[index2] = temp;
+                }
+            }
+        pass++;
    }
    
 for(index = 0; index<10; index++) 
