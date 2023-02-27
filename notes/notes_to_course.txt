@@ -5,3 +5,16 @@ coding standards :https://isocpp.org/wiki/faq/coding-standards
 
 Notes to links:
 Podstawowe wytyczne do c++ :http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines
+
+
+
+Section 8 :
+- c++ ma operatory (unary,binary,ternary)
+- grupy operatorów ( assugnment, arithmetic, increment/decrement, relational, logical, member access, other)
+- operatory przypisane(assigment) służą do modyfikowania wartości jakiegoś obiektu poprzez przypisanie mu nowej wartości.
+- operatory arytmetyczne(arithmetic) służą do wykonywania operacji matematycznych na operatorach.
+- operatory inkrementacji i dekrementacji (increment/decrement) część z nich działa jak przypisanie a część jak arytmetyka
+[bardzo często używane]
+- operatort relacyjne lub operatory porównania umożliwiają porównanie wartości dwóch obiektów
+[są bardzo przydatne]
+operatory logiczne służą do testowania warunków logicznych lub boolowskich.
