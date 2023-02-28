@@ -29,6 +29,12 @@ int main ()
     balance -= nickels * nickelValue;
     pennies = balance;
     
+    cout <<"You can provide this change as follows: "<<endl;
+    cout <<"dollars: "<<dollars<<endl;
+    cout <<"quarters: "<<quarters<<endl;
+    cout <<"dimes: "<<dimes<<endl;
+    cout <<"nickels: "<<nickels<<endl;
+    cout <<"pennies: "<<pennies<<endl;
     
     cout<<"=============================================================="<<endl;
     
@@ -49,7 +55,15 @@ int main ()
     cout <<"dimes: "<<dimes<<endl;
     cout <<"nickels: "<<nickels<<endl;
     cout <<"pennies: "<<pennies<<endl;
+cout << "========================================================================"<<endl;
+    //cout << balance << endl;
+    balance -=++ nickels * nickelValue;
     
+    unsigned short x {10};
+    unsigned short y {8};
+    cout << (x^y) << endl;
+   // cout << y << endl;
+   // cout << balance << endl;
     cout << endl;
     return 0;
 }
