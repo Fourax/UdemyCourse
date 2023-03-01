@@ -80,19 +80,23 @@ int main()
 
 
 cout << "\n==========================================================^ QuickSort ^====================================================="<< endl;
-    int x {10};
-    int y {5};
+   
     int resultx{0},resultx2{0},resulty{0},resulty2{0};
     
-    resultx = x++;
-    resultx2 = ++x;
-    resulty = y--;
-    resulty2 = --y;
+    resultx = resultx++;
+    resultx2 = ++resultx2;
+    resulty = resulty--;
+    resulty2 = --resulty2;
     cout <<"resutl++: "<< resultx << endl;
     cout <<"++resutl: "<< resultx2 << endl;
     cout <<"result--: "<< resulty << endl;
     cout <<"--result: "<< resulty2 ;
 cout << "\n=========Increment and Decrement============"<<endl;
+   
+    int x {10};
+    int y {5};
+    int a {2};
+    int b {8};
    
     y += x;
     cout << y << endl;
@@ -102,18 +106,18 @@ cout << "\n=========Increment and Decrement============"<<endl;
     cout << x << endl;\
     x*=y;
     cout << x << endl;
-    x%=2;//powrtórzyć
-    cout << x << endl;
+    b%=a;
+    cout << b << endl;
     x >>= 1;
     cout << x << endl;
     x<<= 1;
     cout << x << endl;
     x &= 2;
     cout << x << endl;
-    x ^= 2;
+    x ^= 2;//powrtórzyć
     cout << x << endl;
     x |= 2;
-    cout << x ;
+    cout << x << hex ;
 cout << "\n ========================Assignment================================"<<endl;
 
     cout << boolalpha;
