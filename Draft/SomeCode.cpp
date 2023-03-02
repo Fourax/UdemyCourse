@@ -194,21 +194,21 @@ cout <<  "\n======================================^Logical^=====================
     }
 cout << "\n================================If Statements=========================================================="<<endl;
 
-     int num {};
+     int numIES {};
      const int target {10};
 
      cout << "Enter a number and i will compare it to "<<endl;
-     cout << num << "is greater than or equal to"<< target ;
-     cin >> num;
+     cout << numIES << "is greater than or equal to"<< target ;
+     cin >> numIES;
 
-     if (num >= target)
+     if (numIES >= target)
      {
         cout << "\n============"<<endl;
-        cout << num << "is less than"<<target<<endl;
+        cout << numIES << "is less than"<<target<<endl;
 
-        int diff{num - target};
+        int diff{numIES- target};
 
-        cout << num << "is" << diff << "less than" << target << endl;
+        cout << numIES<< "is" << diff << "less than" << target << endl;
          
      }
 cout << "\n================================If - Else Statements=========================================================="<<endl;
