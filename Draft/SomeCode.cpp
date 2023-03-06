@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#include <vector>
 using namespace std;
- 
+ /*
 int partition(int arr[], int start, int end)
 {
  
@@ -59,10 +60,10 @@ void quickSort(int arr[], int start, int end)
    
     quickSort(arr, p + 1, end);
 }
- 
+ */
 int main()
 {
- 
+ /*
     int arr[] = { 9, 3, 4, 2, 1, 8 };
     int n = 6;
  
@@ -316,7 +317,7 @@ cout << "\n==================================Nested If Satements================
     cout <<"Enter the letter grade you expect on the exam: ";
     cin >> letter_grade;
 
-    switch(letterGrade)
+    switch(letter_grade)
     {
         case 'a':
         case 'A':
@@ -406,5 +407,83 @@ cout << "\n==================================Nested If Satements================
 
 
 cout << "\n==================================Switch Satements========================================================"<<endl;
+*/
+
+/*
+ int numCO{};
+    cout << "Enter an integer: ";
+    cin >> numCO;
+
+    if(numCO&2 == 0)
+    {
+        cout << numCO << "is even"<<endl;
+    }
+    else
+    {
+        cout << numCO << " is odd"<< endl;
+    }
+
+    cout << numCO << "is"<<((numCO %2 == 0)? "even" : "odd");
+
+    int numCO1{}, numCO2{};
+    
+    cout <<"Enter two integers separated by a space: ";
+    cin >> numCO1 >> numCO2;
+
+    if(numCO1 != numCO2)
+    {
+        cout << "Largest: "<<((numCO1 > numCO2) ? numCO1 : numCO2)<<endl;
+        cout << "Smallest: "<<((numCO1 < numCO2) ? numCO1 : numCO2)<<endl;
+    }
+    else
+    {
+        cout << "The numbers are the same"<<endl;
+    }
+
+cout << "\n==================================Conditional Operator========================================================"<<endl;
+
+    for (int i{1}; i<=10;i++)
+    {
+        cout << i << endl;
+    }
+
+     for (int j{1}; j<=10;j--)
+    {
+        cout << j << endl;
+    }
+
+    for( int a{1},b{5};a<=5;++a,++b)
+    {
+        cout << a << " + " << b << " = " << (a+b)<<endl;
+    }
+
+    for (int i{1}; i<=100; i++)
+    {
+        cout <<i;
+        if(i% 10 ==0)
+        {
+            cout<<endl;
+        }
+        else
+        {
+            cout <<" ";
+        }
+    }
+    
+   for (int i{1}; i<=100;i++)
+   {
+     cout <<  i;
+     cout <<((i % 10 == 0) ?"\n":" ");
+   }
+*/
+    vector <int> nums{10,20,30,40,50};
+
+    for (unsigned i{0}; i<nums.size();++i)
+    {
+        cout << nums[i] << endl;
+    }
+
+
+cout << "\n==================================For Loop========================================================"<<endl;
   return 0;
 }
