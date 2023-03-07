@@ -364,7 +364,7 @@ cout << "\n==================================Nested If Satements================
             }
             else
             {
-                cout <<"Illegal chice"<<endl;
+                cout <<"Illegal choce"<<endl;
             }
 
         }
@@ -475,7 +475,7 @@ cout << "\n==================================Conditional Operator===============
      cout <<  i;
      cout <<((i % 10 == 0) ?"\n":" ");
    }
-*/
+
     vector <int> nums{10,20,30,40,50};
 
     for (unsigned i{0}; i<nums.size();++i)
@@ -485,5 +485,57 @@ cout << "\n==================================Conditional Operator===============
 
 
 cout << "\n==================================For Loop========================================================"<<endl;
+
+    int scores[]{10,20,30};
+
+    for (auto score: scores)
+    {
+        cout << score << endl;
+    }
+
+    vector<double>temperatures{87.9,77.9,80.0,72.5};
+    double averageTemp{};
+    double total {};
+
+    for(auto temp : temperatures)
+    {
+        total += temp;
+    }
+    
+    if(temperatures.size() != 0)
+    {
+        averageTemp = total/temperatures.size(); 
+    }
+    cout << fixed<< setprecision(1); // #include <iomanip>
+    cout << "Average temperature is " << averageTemp << endl;
+
+
+    for (auto val:{1,2,3,4,5})
+    {
+        cout << val << endl;
+    }
+   
+   for (auto c: "This is a test")
+   {
+        if(c != ' ')
+        {
+            cout << c;
+        }
+   
+   }
+    */
+   for ( auto c: " This is a test")
+   {
+        if(c == ' ')
+        {
+            cout <<"\t";
+        }
+        else
+        {
+
+            cout << c;
+        }
+   }
+cout << "\n==================================Range-base For Loop========================================================"<<endl;
   return 0;
 }
