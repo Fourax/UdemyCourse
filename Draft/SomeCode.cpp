@@ -407,9 +407,9 @@ cout << "\n==================================Nested If Satements================
 
 
 cout << "\n==================================Switch Satements========================================================"<<endl;
-*/
 
-/*
+
+
  int numCO{};
     cout << "Enter an integer: ";
     cin >> numCO;
@@ -523,7 +523,7 @@ cout << "\n==================================For Loop===========================
         }
    
    }
-    */
+
    for ( auto c: " This is a test")
    {
         if(c == ' ')
@@ -536,6 +536,66 @@ cout << "\n==================================For Loop===========================
             cout << c;
         }
    }
+       
 cout << "\n==================================Range-base For Loop========================================================"<<endl;
+
+
+    int numWI{};
+    cout << " Enter a positive integer - start the countdown :";
+    cin >>  numWI;
+
+    while(numWI > 0)
+    {
+        cout << numWI << endl;
+        --numWI;
+    }
+    cout <<"Blastoff"<<endl;
+
+    int numWI{};
+    cout << "Enter integer to count up to: ";
+    cin >> numWI;
+
+    int i {1};
+    while (numWI >=i)
+    {
+        cout << i << endl;
+        i++;
+    }
+
+
+    int number{};
+
+    cout << "Enter an integer less than 100: ";
+    cin >> number;
+
+    while(number >= 100)
+    {
+        cout <<"Enter an integer less than 100: ";
+        cin >> number;
+    }
+cout <<"Thanks"<<endl;
+*/
+
+    bool done {false};
+    int number {0};
+
+    while(!done)
+    {
+        cout << "Enter an integer between 1 and 5: ";
+        cin >> number;
+
+        if(number <=1 || number >=5)
+        {
+            cout <<"Out of range, try again"<<endl;
+        }
+        else
+        {
+            cout << "Thanks!"<<endl;
+            done = true;
+        }
+    }
+
+cout << "\n==================================While Loop========================================================"<<endl;
+
   return 0;
 }
