@@ -2,87 +2,10 @@
 #include <iomanip>
 #include <vector>
 using namespace std;
- /*
-int partition(int arr[], int start, int end)
-{
- 
-    int pivot = arr[start];
- 
-    int count = 0;
-    for (int i = start + 1; i <= end; i++) 
-    {
-        if (arr[i] <= pivot)
-        count++;
-    }
- 
-   
-    int pivotIndex = start + count;
-    swap(arr[pivotIndex], arr[start]);
- 
-    
-    int i = start, j = end;
- 
-    while (i < pivotIndex && j > pivotIndex) 
-    {
- 
-        while (arr[i] <= pivot) 
-        {
-            i++;
-        }
- 
-        while (arr[j] > pivot) 
-        {
-            j--;
-        }
- 
-        if (i < pivotIndex && j > pivotIndex) 
-        {
-            swap(arr[i++], arr[j--]);
-        }
-    }
- 
-    return pivotIndex;
-}
- 
-void quickSort(int arr[], int start, int end)
-{
- 
-   
-    if (start >= end)
-        return;
- 
-   
-    int p = partition(arr, start, end);
- 
-   
-    quickSort(arr, start, p - 1);
- 
-   
-    quickSort(arr, p + 1, end);
-}
- */
+
 int main()
 {
  /*
-    int arr[] = { 9, 3, 4, 2, 1, 8 };
-    int n = 6;
- 
-    quickSort(arr, 0, n - 1);
- 
-    for (int i = 0; i < n; i++) 
-    {
-        cout << arr[i] << " ";
-    }
- 
-
-
-
-
-
-
-
-cout << "\n==========================================================^ QuickSort ^====================================================="<< endl;
-   
     int resultx{0},resultx2{0},resulty{0},resulty2{0};
     
     resultx = resultx++;
@@ -312,7 +235,7 @@ cout << "\n -------------------Shopping example---------------------------------
 
 cout << "\n==================================Nested If Satements========================================================"<<endl;
 
-    char letter_grade{}; // trzeba uzyc srednika zapytac czemu 
+    char letterg_grade{}; 
 
     cout <<"Enter the letter grade you expect on the exam: ";
     cin >> letter_grade;
@@ -574,7 +497,7 @@ cout << "\n==================================Range-base For Loop================
         cin >> number;
     }
 cout <<"Thanks"<<endl;
-*/
+
 
     bool done {false};
     int number {0};
@@ -595,7 +518,141 @@ cout <<"Thanks"<<endl;
         }
     }
 
+
 cout << "\n==================================While Loop========================================================"<<endl;
 
+
+    char selection{};
+    do
+    {
+
+        cout << "\n--------------"<<endl;
+        cout << "1.Do this"<<endl;
+        cout << "2.Do that"<<endl;
+        cout << "3.Do something else"<<endl;
+        cout << "Q. Quiet"<<endl;
+        cout <<"\nEnter your selection: "<<endl;
+        cin >> selection;
+
+        if(selection == '1')
+        {
+            cout << "You chose 1 - doing this"<<endl;
+        }
+        else
+        {
+            if(selection == '2')
+            {
+                cout << "You chose 2 - doing that"<<endl;
+            }
+            else
+            {
+                if(selection == '3')
+                {
+                    cout << "You chose 3 - doing something else"<<endl;
+                }
+                else
+                {
+                    if(selection == 'Q' || selection == 'q')
+                    {
+                        cout << "Goodbye...";
+                    }
+                    else
+                    {
+                        cout <<"Unknown option --- try again"<<endl;
+                    }
+                }
+            }
+        }
+
+        
+    } 
+    while (selection !='q' && selection !='Q');
+cout << "\n==================================Do While Loop========================================================"<<endl;
+
+    vector<int> values {1,2,-1,3,-99,7,8,10};
+
+    for(auto val: values)
+    {
+        if (val == -99)
+        {
+            break;
+        }
+        else
+        {
+            if(val == -1)
+            {
+                continue;
+            }
+            else
+            {
+                cout << val << endl;
+            }
+        }
+        
+    }
+     !//Infinity Loop               
+    //for (;;)
+    //{
+     //   cout << "This will print forever"<<endl;
+    //}
+
+    //while (true)
+    //{
+      //  cout <<"This will print forever"<<endl;
+    //}
+
+    //do
+    //{
+      //  cout << "This will print forever"<<endl;
+    //}while(true);
+                    
+
+cout << "\n==================================Continue and Break Statements========================================================"<<endl;
+
+    for (int num1 {1}; num1 <= 10; ++num1)
+    {
+        for (int num2{1}; num2 <= 10; ++num2)
+        {
+            cout << num1 << "*"<<num2<<"="<<num1 * num2 << endl;
+        }
+    }
+*/
+    int numItem{};
+
+    cout << "How many data items do you have? ";
+    cin >> numItem;
+
+    vector<int>data{};
+    for(int i {1}; i<=numItem; i++)
+    {
+        int dataItem{};
+        cout <<"Enter data item"<< i << ":";
+        cin >> dataItem;
+        data.push_back(dataItem);//push_back dodaje nowy item do vectora
+    }
+    cout << "\nDisplayinh Hisogram"<<endl;
+         
+         for(auto val:data)
+    {
+        
+        
+            for ( int i {1}; i<=val; i++)
+                {
+                    if(i % 5 == 0)
+                    {
+                        cout << "*";
+                    }
+                    else
+                    {
+                        cout <<"-";
+                    }
+                    
+                }
+        
+       
+    }
+    
+ cout << endl;
+cout << "\n==================================Nested Loops========================================================"<<endl;
   return 0;
 }
