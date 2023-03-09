@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <cstring>//for c-style string functions
+#include <cctype>//for character-base function
 using namespace std;
 
 int main()
@@ -616,7 +618,7 @@ cout << "\n==================================Continue and Break Statements======
             cout << num1 << "*"<<num2<<"="<<num1 * num2 << endl;
         }
     }
-*/
+
     int numItem{};
 
     cout << "How many data items do you have? ";
@@ -654,5 +656,77 @@ cout << "\n==================================Continue and Break Statements======
     
  cout << endl;
 cout << "\n==================================Nested Loops========================================================"<<endl;
+ cout << endl;
+cout << "\n<><><><><><><><><><><><><>^^^^Section 9^^^^<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>"<<endl;
+
+//#include <cctypes>
+//function_name(char);
+cout << "\n==================================Character Functions========================================================"<<endl;
+*/
+    char firstName[20] {};
+    char lastName [20] {};
+    char fullName [50] {};
+    char temp [50] {};
+
+    cout << "Please enter you first name: ";
+    cin >> firstName;
+
+    cout << "Please enter your last name: ";
+    cin >> lastName;
+    
+    cout << "---------------------------------"<<endl;
+
+    cout <<"Hello, "<< firstName <<"your first name has "<<strlen(firstName)<<" characters"<<endl;
+    cout << "and you last name, "<< lastName <<" has "<<strlen(lastName)<< " characters"<<endl;
+
+    strcpy(fullName,firstName);
+    strcat(fullName," ");
+    strcat(fullName,lastName);
+
+    cout <<"Your full name is"<< fullName << endl;
+
+    cout <<"---------------------------------"<<endl;
+
+    cout <<"Enter your full name: ";
+    cin >> fullName;
+  
+    cout <<"You full name is "<< fullName << endl; 
+
+    cout <<"Enter your full name: ";
+    cin.getline(fullName,50);//c string 
+    cout <<"Your full name is"<<fullName<<endl;
+
+    cout <<"------------------------------"<<endl;
+
+    strcpy(temp,fullName);
+
+    if(strcpy(temp,fullName)== 0)
+    {
+        cout << temp <<"and"<<fullName<<" are the same"<<endl;
+    }
+    else
+    {
+        cout << temp <<"and"<<fullName<<"are diffrent"<<endl;
+    }
+
+    cout << "------------------------------------------------------"<<endl;
+
+    for(size_t i { 0 }; i<strlen(fullName); i++)
+    {
+        if(isalpha(fullName[i]))
+        {
+            fullName[i] = toupper(fullName[i]);
+        }
+        cout <<"your full name is"<<fullName<<endl;
+    }
+    
+    cout <<"-------------------------------"<<endl;
+
+    cout <<"Result of comparing" << temp<<" and"<<fullName<<":"<<strcmp(temp,fullName)<<endl;
+    cout<<"Result of comparing"<< fullName<<"and"<<temp<<":"<<strcmp(fullName,temp)<<endl;
+
+   
+
+cout << "\n==================================C-style Strings========================================================"<<endl;
   return 0;
 }
