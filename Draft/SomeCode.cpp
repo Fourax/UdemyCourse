@@ -3,6 +3,7 @@
 #include <vector>
 #include <cstring>//for c-style string functions
 #include <cctype>//for character-base function
+#include <string> //important (c++ strings)
 using namespace std;
 
 int main()
@@ -662,7 +663,7 @@ cout << "\n<><><><><><><><><><><><><>^^^^Section 9^^^^<><><><><><><><><><><><><>
 //#include <cctypes>
 //function_name(char);
 cout << "\n==================================Character Functions========================================================"<<endl;
-*/
+
     char firstName[20] {};
     char lastName [20] {};
     char fullName [50] {};
@@ -728,5 +729,126 @@ cout << "\n==================================Character Functions================
    
 
 cout << "\n==================================C-style Strings========================================================"<<endl;
+*/
+    string s0;
+    string s1 {"Apple"};
+    string s2 {"Banana"};
+    string s3 {"Kiwi"};
+    string s4 {"apple"};
+    string s5 {s1};//Apple
+    string s6 {s1, 0,3};//App
+    string s7 (10,'X');//XXXXXXXXXX
+
+    cout << s0 << endl;//No garbage
+    cout << s0.length()<<endl;//empty string
+    
+    
+    cout << "\nInitialization"<<"\n-----------------------------------"<<endl;
+    
+    cout <<"s1 is initialized to: "<< s1 <<endl;
+    cout <<"s2 is initialized to: "<< s2 <<endl;
+    cout <<"s3 is initialized to: "<< s3 <<endl;
+    cout <<"s4 is initialized to: "<< s4 <<endl;
+    cout <<"s5 is initialized to: "<< s5 <<endl;
+    cout <<"s6 is initialized to: "<< s6 <<endl;
+    cout <<"s7 is initialized to: "<< s7 <<endl;
+
+    cout <<"\nComparison"<<"\n----------------------------------------"<<endl;
+
+    cout << boolalpha;
+
+    cout << s1 << " == " << s5 << ": " << (s1 == s5) << endl;
+    cout << s1 << " == " << s2 << ": " << (s1 == s2) << endl;
+    cout << s1 << " != " << s2 << ": " << (s1 != s2) << endl;
+    cout << s1 << " < " << s2 << ": " << (s1 < s2) << endl;
+    cout << s2 << " > " << s1 << ": " << (s2 > s1) << endl;
+    cout << s4 << " > " << s5 << ": " << (s4 < s5) << endl;
+    cout << s1 << " == " << "Apple" << ": " << (s1 == "Apple")<<endl;
+
+    cout << "\nAssignment"<<"\n---------------------------------------------"<<endl;
+
+    s1 ="Watermelon";
+    cout << "s1 is now: " << s1 << endl;
+
+    s2 = s1;
+    cout << "s2 is now: " << s2 <<endl;
+
+    s3 = "Frank";
+    cout << "s3 is now: " << s3 <<endl;
+
+    s3[0] = 'C'; //Crank
+    cout << "s3 change first letter to C" << s3 << endl;
+    s3.at(0) = 'P';
+    cout <<"s3 change first letter to P: "<< s3 << endl;
+
+    cout << "\n Concatenation"<<"\n-----------------------------------------------------"<<endl;
+
+    s3 ="Watermelon";
+    s3 = s5 + " and " + s2 + " juice";// Apple and Watermelon juice
+
+    cout << " s3 is now: "<< s3 << endl; //Apple and Watermelon juice
+
+   // s3 ="nice "+ "cold" + s5 + "juice";// Compiler error
+
+   cout << "For loop"<<"\n---------------------------------"<<endl;
+
+    s1 = "Apple";
+
+    for(size_t i {0}; i<s1.length(); i++)
+    {
+        cout << s1.at(i); // or s1[i] Apple
+    }
+    cout <<endl;
+
+    for (char c:s1)
+    {
+        cout << c;
+    }
+    cout << endl;
+
+    cout << "Substring"<<"\n------------------------------------"<<endl;
+
+    s1 = "This is a test: ";
+
+    cout <<s1.substr(0,4)<<endl;//stat with 0 and show 4 letter after 0 element
+    cout <<s1.substr(5,2)<<endl;// stop with 5 th element and show 2 leters 
+    cout << s1.substr(10,4)<<endl;
+
+    cout << "\nErase"<<"\n-------------------------------------------"<<endl;
+
+    s1 = "This is a test";
+    s1.erase(0,5);//stop with 0 element and show all after 5 element
+    cout <<"s1 is now: "<<s1<<endl;
+
+    cout << "\nGetLine"<<"\n-------------------------------------------"<<endl;
+
+    string fullName{};
+
+    cout <<"Enter your full name: ";
+    
+    getline(cin,fullName);
+
+    cout <<"Your full name is: "<< fullName << endl;
+
+    cout <<"\nFind"<<"\n------------------------------"<<endl;
+
+    s1 = "The secret word is Boo";
+    string word {};
+
+    cout <<"Enter the word to find: ";
+    getline(cin,word);
+    //cin >> word;
+
+    size_t position = s1.find(word);
+
+    if(position != string::npos)
+    {
+        cout <<"Found "<< word <<" at position: "<< position <<endl;
+    }
+    else
+    {
+        cout <<"Sorry, "<< word << " not found" << endl;
+    }
+cout << "\n==================================C++ Strings========================================================"<<endl;
   return 0;
 }
