@@ -16,7 +16,7 @@ int main ()
 
     cout << "\nEncrypting message..."<<endl;
 
-    for(char c:secretMessage)
+    for(auto c:secretMessage)
     {
         size_t position = alphabet.find(c);
         if(position != string::npos)
@@ -49,7 +49,7 @@ int main ()
         }
     }
 
-    cout <<"\nDecrupted message is"<<decryptedMessage<<endl;
+    cout <<"\nDecrupted message is "<<decryptedMessage<<endl;
     
     
     

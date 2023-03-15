@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
- 
+#include<algorithm>
  using namespace std;
 
  int main()
@@ -9,13 +9,14 @@
   int position {0};
   cout << "Enter sings to build pyramid from them: ";
   getline (cin, signs);
-
-  size_t numOfSings = signs.length();
-  
+  reverse(signs.begin(), signs.end());
+  size_t numOfSings = signs.length() ;
+  char lastElement = signs.back();
   for (auto x:signs)
   {
+   
       size_t singSpace = numOfSings - position;
-     
+    
      while(singSpace > 0)
      {
       cout << " ";
@@ -29,7 +30,7 @@
 
     cout << x;
     
-    for(auto j {position - 1}; j >- 0; --j)
+    for(auto j{position - 1}; j >= 0; j--)
     {
       auto y = static_cast<size_t>(j);
       cout<< signs.at(y);
