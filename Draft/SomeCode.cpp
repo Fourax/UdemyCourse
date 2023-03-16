@@ -4,6 +4,9 @@
 #include <cstring>//for c-style string functions
 #include <cctype>//for character-base function
 #include <string> //important (c++ strings)
+#include <cmath> 
+#include <cstdlib> //reguired for rand()
+#include <ctime> //reguired for time()
 using namespace std;
 
 int main()
@@ -729,7 +732,7 @@ cout << "\n==================================Character Functions================
    
 
 cout << "\n==================================C-style Strings========================================================"<<endl;
-*/
+
     string s0;
     string s1 {"Apple"};
     string s2 {"Banana"};
@@ -850,5 +853,40 @@ cout << "\n==================================C-style Strings====================
         cout <<"Sorry, "<< word << " not found" << endl;
     }
 cout << "\n==================================C++ Strings========================================================"<<endl;
+  */
+ //cppreference.com
+ // add liblary cmath
+ // add liblary cstdlib
+ // add liblary ctime
+    double num {};
+
+    cout <<"Enter a number(double)";
+    cin >> num;
+
+    cout <<"The sqrt of"<< num <<"is: "<<sqrt(num)<<endl;
+    cout <<"The cubed root of"<< num <<"is: "<<cbrt(num)<<endl;
+
+    cout <<"The sine of"<< num <<"is: "<<sin(num)<<endl;
+    cout <<"The cosine of"<< num << "is: "<<cos(num)<<endl;
+
+    cout << "The ceil of"<< num <<"is: "<<ceil(num)<<endl;
+    cout <<"The floor of"<< num <<"is: "<<floor(num)<<endl;
+    cout <<"The round of"<< num <<"is: "<<round(num)<<endl;
+
+    double power{};
+
+    cout <<"\nEnter a power to raise"<< num <<"to: ";
+    cin >> power;
+    cout << num <<" raised to the"<<"power is: "<<pow(num,power)<<endl;
+cout << "\n=======================================Funktions==================================================="<<endl;
+
+    int  randomNumber{};
+    size_t count{10};
+    int min{1};
+    int max{6};
+
+    cout <<"RAND_MAX on my system is: " << RAND_MAX << endl;
+    srand(time(nullptr));
+cout << "\n=======================================^Random Numbers^==================================================="<<endl;
   return 0;
 }
