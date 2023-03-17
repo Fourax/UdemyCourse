@@ -853,7 +853,7 @@ cout << "\n==================================C-style Strings====================
         cout <<"Sorry, "<< word << " not found" << endl;
     }
 cout << "\n==================================C++ Strings========================================================"<<endl;
-  */
+
  //cppreference.com
  // add liblary cmath
  // add liblary cstdlib
@@ -887,6 +887,18 @@ cout << "\n=======================================Funktions=====================
 
     cout <<"RAND_MAX on my system is: " << RAND_MAX << endl;
     srand(time(nullptr));
+
+    for(size_t i{1}; i<=count; i++)
+    {
+        randomNumber = rand() % max+min;//generate a random number [min , max]
+        cout << randomNumber << endl;
+    }
 cout << "\n=======================================^Random Numbers^==================================================="<<endl;
+  */
+
+   //new cpp script => DefineFunctions.cpp
+
+
+cout << "\n=======================================Defining Functions==================================================="<<endl;
   return 0;
 }
