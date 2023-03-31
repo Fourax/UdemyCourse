@@ -897,7 +897,9 @@ cout << "\n=======================================^Random Numbers^==============
   */
 
    //new cpp script => DefineFunctions.cpp
+//Wewnątrz definicji klasy słowo kluczowe static deklaruje elementy, które nie są powiązane z instancjami klas.
 
+//Poza definicją klasy ma inne znaczenie: patrz czas przechowywania .
 
 cout << "\n=======================================Defining Functions==================================================="<<endl;
   return 0;
