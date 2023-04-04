@@ -1,0 +1,8 @@
+Pointers(wskaźnik) - zmienna przechowujaca adres innej zmiennej lub funkcji
+[Deklaracja wskaźników variable_type *pointer_name]
+{int *int_ptr;}
+
+Initialization pointer variable to "point nowhere"
+[variable_type *pointer_name {nullptr};]
+{int *int_ptr {};}
+[double* double_ptr{nullptr}]
