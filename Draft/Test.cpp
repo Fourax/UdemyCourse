@@ -2,13 +2,12 @@
 
 using namespace std;
 
-int sum (int a,int b)
-{
-    return a + b;
-}
 
 int main () 
 {
-    cout << sum ;
-   //  return 0;
+    int num{10};
+    cout <<"Value of num is: "<<num << endl;
+    cout <<"sizeof of num is: "<<sizeof num <<endl;
+    cout <<"Address of num is: "<< &num<<endl;
+    return 0;
 }
