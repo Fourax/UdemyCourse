@@ -34,7 +34,7 @@ int main()
     int score{10};
     double high_temp{100.7};
 
-    int *score_ptr{nullptr};//wskaźnik wyniku, jest wyzerowany wiec wskazuje nigdzie
+    int *score_ptr{nullptr}; //wskaźnik wyniku, jest wyzerowany wiec wskazuje nigdzie
     
     score_ptr = &score;//Ta linijka miowi ze wskaźnik wynitku jest równy adresowi partytury, Inicjuję ten wskaźnik gdzie wskazać teraz
 

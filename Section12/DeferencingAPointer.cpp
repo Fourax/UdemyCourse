@@ -42,7 +42,7 @@ int main ()
 
     vectorPtr = &stooges;
 
-    cout << "First stooge: "<<(*vectorPtr).at(0) << endl; // Larry
+    cout << "First stooge: "<<(*vectorPtr).at(0) << endl; // Larry , rztuowanie na typ (vector)
 
     cout <<"Stooges: ";
     for(auto stooge: *vectorPtr)
