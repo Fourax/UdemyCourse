@@ -13,6 +13,7 @@ void display(vector<string> *v)// funkcja oczekje na wskaźnik do tablicy(vektor
     }
     cout << endl;
 }
+
 void display(int *array, int sentinel)//przekazuje adres tej pierwszej liczby oraz wartownika (-1) czyli liczby gdzie ma sie zatrzymac(sentinel)
 {
     while(*array != sentinel)
@@ -23,12 +24,12 @@ void display(int *array, int sentinel)//przekazuje adres tej pierwszej liczby or
 }
 int main()
 {
-    /*
+    
     cout <<"----------------------------"<< endl;
     
     vector<string> stooges{"Larry", "Moe" , "Curly"};// przykładowy adres 1000
     display(&stooges);
-    */
+    
     cout <<"\n---------------------------"<<endl;
     int scores[]{100,98,97,79,85,-1};// przykładowy adres 100[1000], sentinel = -1
     display(scores, -1);
