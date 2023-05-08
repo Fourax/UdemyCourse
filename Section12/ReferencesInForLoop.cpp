@@ -25,7 +25,7 @@ int main ()
         str = "Funny";
     }
     
-    for(auto const &str:stooges)//
+    for(auto const &str:stooges)
     {
         cout << str << endl;
     }
