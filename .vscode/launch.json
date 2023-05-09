@@ -1,16 +1,20 @@
 {
-    "configurations": [
-        {
-            "name": "(Windows) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "wprowadź nazwę programu, na przykład ${workspaceFolder}/a.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "externalTerminal"
-        }
-    ],
-    "version": "2.0.0"
-}
+    "version": "0.2.0",
+     "configurations": [
+
+         {
+            "name": "(gdb) Launch",
+             "type": "cppdbg",
+             "request": "launch",
+             "program": "${fileDirname}/${fileBasenameExtension}",
+             "args": [],
+             "stopAtEntry": true,
+             "cwd": "${workspaceFolder}",
+             "environment": [],
+             "externalConsole": false,
+             "MIMode": "gdb",
+             
+            
+         }
+     ]
+ }

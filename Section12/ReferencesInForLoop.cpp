@@ -10,7 +10,7 @@ int main ()
 
     for(auto str:stooges)
     {
-        str = "Funny"; //str skopuje kazdy element wektora
+        str = "Funny"; //str skopuje kazdy element wektora, nie działa ponieważ str jest kopia elementow wiec ich zawartość się nie zmienia
     }
     
     for(auto str:stooges)
@@ -25,7 +25,7 @@ int main ()
         str = "Funny";
     }
     
-    for(auto const &str:stooges)
+    for(auto const &str:stooges)// const daje nam zabezpieczenie czyniąc te elementy tylko do odczytu oraz pozwala na ich niekopiowanie [bezpieczne i wydajne wyjscie]
     {
         cout << str << endl;
     }
