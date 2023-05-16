@@ -6,7 +6,7 @@ using namespace std;
 
 int main ()
 {
-    vector<string> stooges {"Larry","Moe","Curly"};\
+    vector<string> stooges {"Larry","Moe","Curly"};
 
     for(auto str:stooges)
     {
