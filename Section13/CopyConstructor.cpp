@@ -22,7 +22,7 @@ public:
     ~Player(){cout <<"Destructor called for: " << name << endl;}
 };
 
-Player::Player(std::string nameVal, int healthVal, int xpVal):name{nameVal}, health{healthVal}, xp{xpVal}
+Player::Player(std::string nameVal, int healthVal, int xpVal):name{nameVal}, health{healthVal}, xp(xpVal)
 {
     cout <<"Three-args constructor"<< name <<endl;
 }
@@ -42,7 +42,7 @@ void displayPlayer(Player p)
 int main ()
 {
     Player empty{"XXXXXX",100,50};
-
+    
     Player myNewObject{empty};
 
     displayPlayer(empty);

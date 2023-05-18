@@ -21,16 +21,17 @@ Player::Player(): name{"None"}, health{0}, xp{0} // to jest ostateczna refaktory
     //name = "None";
   //  health = 0; // nie potrzebujemy 
   //  xp = 0;
+  cout << "zero" << name <<endl;
 }
 
 Player::Player(std::string nameVal): name{nameVal}, health{0}, xp{0}
 {
-    
+    cout << "One" << name << endl;
 }
 
 Player::Player(std::string nameVal, int healthVal, int xpVal): name{nameVal}, health{healthVal}, xp{xpVal}
 {
-   
+   cout << "Three" << name << endl;
 }
 
 int main ()

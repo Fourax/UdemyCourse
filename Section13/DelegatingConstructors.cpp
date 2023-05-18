@@ -11,12 +11,12 @@ private:
     int xp;
 public:
     //Overloaded Constructors
-    Player();
+    Player();//definicja
     Player(std::string nameVal);
     Player(std::string nameVal, int healthVal, int xpVal);
 };
 
-Player::Player():Player{"None",0,0}
+Player::Player():Player{"None",0,0}//implementacja
 //:name{"None"}, health{0}, xp(0)
 {
     cout << "No-args constructor" << endl;
@@ -29,7 +29,7 @@ Player::Player(std::string nameVal):Player{nameVal,0,0}
 Player::Player(std::string nameVal, int healthVal, int xpVal): name{nameVal}, health{healthVal}, xp{xpVal}//zapytac dlaczego wszytko przegodzi przez to 
 
 {
-    cout <<"Tree-args constructor" << endl;
+    cout <<"Tree-args constructor" << name << endl;
 } 
 
 int main ()
