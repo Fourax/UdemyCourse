@@ -50,5 +50,7 @@
         "xtr1common": "cpp",
         "xutility": "cpp"
     },
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.dimInactiveRegions": false
 }
