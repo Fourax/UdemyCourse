@@ -18,7 +18,7 @@ public:
 
     int getLength()const;//getters
     
-    const char *getStr()const;
+    const char *getStr() const;
 
 };
 
