@@ -1,5 +1,5 @@
 #include  <iostream>
-#include"Account.h"
+#include"OverloadingOperator.h"
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int main()
     cout << (larry == stooge) << endl;
 
     larry.display();
-    OveloadingOperator larry2 = -larry;
+    OverloadingOperator larry2 = -larry;
     larry2.display();
 
     OverloadingOperator stooges = larry + "Moe";
@@ -26,6 +26,15 @@ int main()
 
     OverloadingOperator threeStooges = moe + " " + larry + " " + "Curly";
     threeStooges.display();
+ cout <<"start" << endl;
+    OverloadingOperator dupa("dupa");
+    dupa = dupa + "jest blada";
+    dupa.display();
 
+    cout << dupa.getStr() << endl;
+    OverloadingOperator dupa1 = dupa + "brudna";
+    cout << "koniec" << endl;
+    cout << dupa.getStr() << endl;
+    cout << dupa1.getStr() << endl;
     return 0;
 }

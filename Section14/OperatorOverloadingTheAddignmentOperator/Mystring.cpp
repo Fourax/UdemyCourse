@@ -31,10 +31,7 @@ Mystring::~Mystring()//Deconstructor
     delete[] str;
 }
 
-void Mystring::display()const//Display method
-{
-    std::cout << str << " : " << getLength() << std::endl;
-}
+
 
 Mystring &Mystring::operator=(const Mystring &rhs)//Copy assignment
 {
@@ -48,6 +45,11 @@ Mystring &Mystring::operator=(const Mystring &rhs)//Copy assignment
     std::strcpy(this->str, rhs.str);
     return *this;
 } 
+
+void Mystring::display()const//Display method
+{
+    std::cout << str << " : " << getLength() << std::endl;
+}
 
 int Mystring::getLength()const //getters
 {
