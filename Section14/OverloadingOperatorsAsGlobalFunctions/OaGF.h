@@ -2,12 +2,12 @@
 #define OAGF_H
 
 #pragma once
-
+using namespace std;
 class OaGF
 {
     friend bool operator==(const OaGF &lhs, const OaGF &rhs);
-    friend OaGF operator-(const OaGF *obj);
-    friend OaGF operator+(cinst OaGF &lhs, const OaGF &rhs);
+    friend OaGF operator-(const OaGF &obj);
+    friend OaGF operator+(const OaGF &lhs, const OaGF &rhs);
 private:
     char *str;//pointer to a char[] that hold a C-style string
 public:
@@ -18,7 +18,7 @@ public:
     ~OaGF();
 
     OaGF &operator=(const OaGF &rhs);
-    OaGF &operator=(OaGF &&rhs);
+   // OaGF &operator=(OaGF &&rhs);
 
     void display() const;
 
