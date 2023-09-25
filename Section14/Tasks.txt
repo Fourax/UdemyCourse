@@ -40,3 +40,43 @@ bool Money::operator==(const Money &rhs) const {
 bool Money::operator!=(const Money &rhs) const {
     return !(rhs == *this);
 }
+--------------Task2-------------------------------
+
+Money.cpp
+
+#include "Money.h"
+
+Money::Money(int dollars, int cents) : dollars{dollars}, cents{cents} {}
+
+Money::Money(int total) : dollars {total/100}, cents{total%100}  {}
+   
+Money operator+(const Money &lhs, const Money &rhs) {
+    int total = (lhs.dollars + rhs.dollars) * 100;
+    total += lhs.cents + rhs.cents;
+    return Money{total};
+}
+
+------------------Money.h--------------------------------------------
+
+#ifndef _MONEY_MONEY_H
+#define _MONEY_MONEY_H
+
+
+#include <iostream>
+
+class Money {
+    int dollars;
+    int cents;
+public:
+    Money(int dollars, int cents);
+    Money(int total);
+    int get_dollars() const {return dollars;}
+    int get_cents() const {return cents; }
+    
+    friend Money operator+(const Money &lhs, const Money &rhs);
+
+};
+
+
+#endif
+
