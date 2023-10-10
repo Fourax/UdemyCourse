@@ -78,5 +78,36 @@ public:
 };
 
 
-#endif
+#endif //_MONEY_MONEY_H
+
+------------------------------------Task3---------------------------
+~Money.h~
+#ifndef _MONEY_MONEY_H
+#define _MONEY_MONEY_H
+
+#include <iostream>
+
+class Money {
+    int dollars;
+    int cents;
+public:
+    Money(int dollars, int cents);
+    Money(int total);
+    friend std::ostream &operator<<(std::ostream &os, const Money &money);
+};
+
+#endif //_MONEY_MONEY_H
+
+~Money.cpp~
+#include "Money.h"
+
+Money::Money(int dollars, int cents) : dollars{dollars}, cents{cents} {}
+Money::Money(int total) : dollars {total/100}, cents{total%100}  {}
+
+std::ostream &operator<<(std::ostream &os, const Money &money) {
+    os << "dollars: " << money.dollars << " cents: " << money.cents;
+    return os;
+}
+
+
 
